@@ -3,7 +3,7 @@ kind: ConsoleNotification
 metadata:
   name: banner-bottom
 spec:
-  text: Copyright © 2022 Qatar Datamation Systems Co. |                    
+  text: Copyright © 2022 Qatar Datamation Systems W.L.L. |                    
   location: BannerBottom 
   link:
     href: 'https://www.qdsnet.com/privacy-policy/'
