@@ -13,7 +13,7 @@ wget https://raw.githubusercontent.com/rejeeb786/test/main/qds.png &> /dev/null
 echo -e "\u2714 Downloaded sample logo"
 oc create configmap console-custom-logo --from-file qds.png -n openshift-config &> /dev/null
 echo -e "\u2714 Imported logo file into config map"
-oc patch console.operator.openshift.io cluster --type='merge' --patch '{"spec":{"customization": { "customLogoFile": {"key":"qds.png.png","name": "console-custom-logo"},"customProductName":"Sample Company Inc"}}}' &> /dev/null
+oc patch console.operator.openshift.io cluster --type='merge' --patch '{"spec":{"customization": { "customLogoFile": {"key":"qds.png","name": "console-custom-logo"},"customProductName":"Qatar Datamation Systems W.L.L."}}}' &> /dev/null
 echo -e "\u2714 Patched the web console’s operator configuration"
 echo -e "# \033[1mTASK 2\033[0m: \033[1;92mCompleted\033[0m"
 echo "###################"
