@@ -9,11 +9,11 @@ cd /tmp/script_dir &> /dev/null
 echo -e "# \033[1mTASK 1\033[0m: \033[1;92mCompleted\033[0m"
 echo "###################"
 echo -e "# \033[1;91mTASK 2\033[0m: Add a custom logo and product name"
-wget https://raw.githubusercontent.com/rejeeb786/test/main/qds.png &> /dev/null
+wget https://raw.githubusercontent.com/rejeeb786/test/main/console-custom-logo.png &> /dev/null
 echo -e "\u2714 Downloaded sample logo"
-oc create configmap console-custom-logo --from-file qds.png -n openshift-config &> /dev/null
+oc create configmap console-custom-logo --from-file console-custom-logo.png -n openshift-config &> /dev/null
 echo -e "\u2714 Imported logo file into config map"
-oc patch console.operator.openshift.io cluster --type='merge' --patch '{"spec":{"customization": { "customLogoFile": {"key":"qds.png","name": "console-custom-logo"},"customProductName":"Qatar Datamation Systems W.L.L."}}}' &> /dev/null
+oc patch console.operator.openshift.io cluster --type='merge' --patch '{"spec":{"customization": { "customLogoFile": {"key":"console-custom-logo.png","name": "console-custom-logo"},"customProductName":"Qatar Datamation Systems W.L.L."}}}' &> /dev/null
 echo -e "\u2714 Patched the web console’s operator configuration"
 echo -e "# \033[1mTASK 2\033[0m: \033[1;92mCompleted\033[0m"
 echo "###################"
