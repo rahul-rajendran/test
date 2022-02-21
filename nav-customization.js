@@ -8,7 +8,7 @@ angular
       // Replace http://status.example.com/ with your domain
       var system_status_elem = $('<a href="http://status.example.com/"' +
       'target="_blank" class="nav-item-iconic system-status"><span title="' +
-      'System Status" class="fa status-icon pficon-warning-triangle-o">' +
+      'Mainteanence Window" class="fa status-icon pficon-warning-triangle-o">' +
       '</span></a>');
 
       // Add the extension point to the registry so the badge appears
